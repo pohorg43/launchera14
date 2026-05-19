@@ -1,0 +1,32 @@
+.class public final La6/o$c;
+.super La6/o;
+.source ""
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = La6/o;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "c"
+.end annotation
+
+
+# instance fields
+.field public final j:Lp6/d;
+
+
+# direct methods
+.method public constructor <init>(Lp6/d;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, La6/o;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    iput-object p1, p0, La6/o$c;->j:Lp6/d;
+
+    return-void
+.end method

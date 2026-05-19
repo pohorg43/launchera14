@@ -1,0 +1,18 @@
+.class final Lcom/google/android/gms/common/zzad;
+.super Ljava/lang/Object;
+.source ""
+
+
+# annotations
+.annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

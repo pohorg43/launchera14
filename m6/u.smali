@@ -1,0 +1,94 @@
+.class public final Lm6/u;
+.super Lm6/p;
+.source ""
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lm6/p<",
+        "Ljava/lang/Short;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(S)V
+    .registers 2
+
+    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lm6/p;-><init>(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Li5/e0;)Ly6/l0;
+    .registers 2
+
+    const-string p0, "module"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {p1}, Li5/e0;->k()Lf5/g;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object p1, Lf5/h;->i:Lf5/h;
+
+    invoke-virtual {p0, p1}, Lf5/g;->u(Lf5/h;)Ly6/s0;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1a
+
+    const-string p1, "module.builtIns.shortType"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
+
+    :cond_1a
+    const/16 p0, 0x39
+
+    invoke-static {p0}, Lf5/g;->a(I)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .registers 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object p0, p0, Lm6/g;->a:Ljava/lang/Object;
+
+    check-cast p0, Ljava/lang/Number;
+
+    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ".toShort()"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

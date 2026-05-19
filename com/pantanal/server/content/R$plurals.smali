@@ -1,0 +1,17 @@
+.class public final Lcom/pantanal/server/content/R$plurals;
+.super Ljava/lang/Object;
+.source ""
+
+
+# static fields
+.field public static final mtrl_badge_content_description:I = 0x7f10000a
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

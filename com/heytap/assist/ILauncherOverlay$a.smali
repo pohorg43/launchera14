@@ -1,0 +1,60 @@
+.class public Lcom/heytap/assist/ILauncherOverlay$a;
+.super Ljava/lang/Object;
+.source ""
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/heytap/assist/ILauncherOverlay;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "a"
+.end annotation
+
+
+# direct methods
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+    .registers 3
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    goto :goto_c
+
+    :cond_b
+    const/4 p0, 0x0
+
+    :goto_c
+    return-object p0
+.end method
+
+.method public static b(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+    .registers 4
+
+    if-eqz p1, :cond_a
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {p1, p0, p2}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+
+    goto :goto_e
+
+    :cond_a
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    :goto_e
+    return-void
+.end method

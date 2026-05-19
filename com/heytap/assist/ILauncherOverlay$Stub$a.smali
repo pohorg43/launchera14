@@ -1,0 +1,1433 @@
+.class public Lcom/heytap/assist/ILauncherOverlay$Stub$a;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Lcom/heytap/assist/ILauncherOverlay;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/heytap/assist/ILauncherOverlay$Stub;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "a"
+.end annotation
+
+
+# instance fields
+.field public a:Landroid/os/IBinder;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public asBinder()Landroid/os/IBinder;
+    .registers 1
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    return-object p0
+.end method
+
+.method public checkoutAssistantAllowDrag(Ljava/lang/String;)I
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    :try_start_8
+    const-string v2, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x16
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+    :try_end_1f
+    .catchall {:try_start_8 .. :try_end_1f} :catchall_26
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return p0
+
+    :catchall_26
+    move-exception p0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public closeAlphaOverlay()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v1, 0x1d
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_12
+    .catchall {:try_start_4 .. :try_end_12} :catchall_16
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_16
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public closeOverlay(I)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/4 p1, 0x6
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_14
+    .catchall {:try_start_4 .. :try_end_14} :catchall_18
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_18
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public endScroll()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_11
+    .catchall {:try_start_4 .. :try_end_11} :catchall_15
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_15
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public endScrollWithVelocity(F)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x1e
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_15
+    .catchall {:try_start_4 .. :try_end_15} :catchall_19
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_19
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public getVoiceSearchLanguage()Ljava/lang/String;
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    :try_start_8
+    const-string v2, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v2, 0xe
+
+    const/4 v3, 0x0
+
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_1c
+    .catchall {:try_start_8 .. :try_end_1c} :catchall_23
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-object p0
+
+    :catchall_23
+    move-exception p0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public hasOverlayContent()Z
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    :try_start_8
+    const-string v2, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v2, 0x10
+
+    const/4 v3, 0x0
+
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+    :try_end_1c
+    .catchall {:try_start_8 .. :try_end_1c} :catchall_26
+
+    if-eqz p0, :cond_1f
+
+    const/4 v3, 0x1
+
+    :cond_1f
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return v3
+
+    :catchall_26
+    move-exception p0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public isVoiceDetectionRunning()Z
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    :try_start_8
+    const-string v2, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v2, 0xf
+
+    const/4 v3, 0x0
+
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+    :try_end_1c
+    .catchall {:try_start_8 .. :try_end_1c} :catchall_26
+
+    if-eqz p0, :cond_1f
+
+    const/4 v3, 0x1
+
+    :cond_1f
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return v3
+
+    :catchall_26
+    move-exception p0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onDestory()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v1, 0xb
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_12
+    .catchall {:try_start_4 .. :try_end_12} :catchall_16
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_16
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onGestureSwipeUp(Ljava/lang/String;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x1b
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_15
+    .catchall {:try_start_4 .. :try_end_15} :catchall_19
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_19
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onPause()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v1, 0x8
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_12
+    .catchall {:try_start_4 .. :try_end_12} :catchall_16
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_16
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onProfileChanged(ZZ)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-eqz p1, :cond_f
+
+    move p1, v2
+
+    goto :goto_10
+
+    :cond_f
+    move p1, v1
+
+    :goto_10
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    if-eqz p2, :cond_16
+
+    move v1, v2
+
+    :cond_16
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x15
+
+    const/4 p2, 0x0
+
+    invoke-interface {p0, p1, v0, p2, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_21
+    .catchall {:try_start_4 .. :try_end_21} :catchall_25
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_25
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onRecentsAnimationFinished(Landroid/os/Bundle;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, p1, v1}, Lcom/heytap/assist/ILauncherOverlay$a;->b(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x18
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_16
+    .catchall {:try_start_4 .. :try_end_16} :catchall_1a
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_1a
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onRecentsAnimationStart()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v1, 0x17
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_12
+    .catchall {:try_start_4 .. :try_end_12} :catchall_16
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_16
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onRecentsAnimationSurfaceSave(Landroid/os/Bundle;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, p1, v1}, Lcom/heytap/assist/ILauncherOverlay$a;->b(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x1a
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_16
+    .catchall {:try_start_4 .. :try_end_16} :catchall_1a
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_1a
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onResume()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v1, 0x9
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_12
+    .catchall {:try_start_4 .. :try_end_12} :catchall_16
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_16
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onScroll(F)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/4 p1, 0x2
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_14
+    .catchall {:try_start_4 .. :try_end_14} :catchall_18
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_18
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onStart()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/4 v1, 0x7
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_11
+    .catchall {:try_start_4 .. :try_end_11} :catchall_15
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_15
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onStop()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v1, 0xa
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_12
+    .catchall {:try_start_4 .. :try_end_12} :catchall_16
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_16
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public onViewAlphaChanged(F)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x19
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_15
+    .catchall {:try_start_4 .. :try_end_15} :catchall_19
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_19
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public openAlphaOverlay()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v1, 0x1c
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_12
+    .catchall {:try_start_4 .. :try_end_12} :catchall_16
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_16
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public openOverlay(I)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0xc
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_15
+    .catchall {:try_start_4 .. :try_end_15} :catchall_19
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_19
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public requestVoiceDetection(Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_e
+
+    move p1, v1
+
+    goto :goto_f
+
+    :cond_e
+    const/4 p1, 0x0
+
+    :goto_f
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0xd
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, p1, v0, v2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_1a
+    .catchall {:try_start_4 .. :try_end_1a} :catchall_1e
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_1e
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public setActivityState(I)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x13
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, p1, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_15
+    .catchall {:try_start_4 .. :try_end_15} :catchall_19
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_19
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public startScroll()V
+    .registers 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p0, v2, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_10
+    .catchall {:try_start_4 .. :try_end_10} :catchall_14
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_14
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public startSearch([BLandroid/os/Bundle;)Z
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    :try_start_8
+    const-string v2, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    const/4 p1, 0x0
+
+    invoke-static {v0, p2, p1}, Lcom/heytap/assist/ILauncherOverlay$a;->b(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p2, 0x14
+
+    invoke-interface {p0, p2, v0, v1, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+    :try_end_22
+    .catchall {:try_start_8 .. :try_end_22} :catchall_2c
+
+    if-eqz p0, :cond_25
+
+    const/4 p1, 0x1
+
+    :cond_25
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return p1
+
+    :catchall_2c
+    move-exception p0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public unusedMethod()V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 v1, 0x12
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-interface {p0, v1, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_12
+    .catchall {:try_start_4 .. :try_end_12} :catchall_16
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_16
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public windowAttached(Landroid/view/WindowManager$LayoutParams;Lcom/heytap/assist/ILauncherOverlayCallback;I)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, p1, v1}, Lcom/heytap/assist/ILauncherOverlay$a;->b(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/4 p1, 0x4
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    invoke-interface {p0, p1, v0, p2, p3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_1b
+    .catchall {:try_start_4 .. :try_end_1b} :catchall_1f
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_1f
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public windowAttached2(Landroid/os/Bundle;Lcom/heytap/assist/ILauncherOverlayCallback;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, p1, v1}, Lcom/heytap/assist/ILauncherOverlay$a;->b(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/16 p1, 0x11
+
+    const/4 p2, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-interface {p0, p1, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_19
+    .catchall {:try_start_4 .. :try_end_19} :catchall_1d
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_1d
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
+
+.method public windowDetached(Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_4
+    const-string v1, "com.heytap.assist.ILauncherOverlay"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_e
+
+    move p1, v1
+
+    goto :goto_f
+
+    :cond_e
+    const/4 p1, 0x0
+
+    :goto_f
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p0, p0, Lcom/heytap/assist/ILauncherOverlay$Stub$a;->a:Landroid/os/IBinder;
+
+    const/4 p1, 0x5
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, p1, v0, v2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_19
+    .catchall {:try_start_4 .. :try_end_19} :catchall_1d
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_1d
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+.end method
